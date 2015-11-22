@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Code Classifier</title>
+</head>
+<body>
+<h3>Code Classifier with Naive Bayes!</h3>
+
+<form action="/index/" method="POST">
+    {% csrf_token %}
+    <textarea name="code_listing" rows="15" cols="60" placeholder="Enter your code, please..."></textarea>
+    <br><br>
+    <input type="submit" value="Classify!">
+</form>
+
+{% if language %}
+    <h3 >Classified language is {{ language }}</h3>
+{% endif %}
+
+
+
+</body>
+</html>
+
